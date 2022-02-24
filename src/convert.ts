@@ -216,9 +216,6 @@ export class Converter<
 
       if (isIncluded && unit.system === system) {
         const result = this.to(possibility);
-        if (result < cutOffNumber) {
-          continue;
-        }
         if (best == null || (result >= cutOffNumber && result < best.val)) {
           best = {
             val: result,
